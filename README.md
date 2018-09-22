@@ -8,18 +8,18 @@ This repository provides the implementation of the method proposed in our paper 
 - [Python 3](https://www.python.org/)
 
 ## Quick Start
-[main.py](main.py) provides an example of usage of our proposed pruning approach. In this example, we prune a simple convolutional neural network. 
+[main.py](main.py) provides an example of usage of our proposed pruning approach. In this example, we prune a simple convolutional neural network. It should be mentioned that the network of this example is not the network used in our paper. Here, we prefer to use this simple network due to the computational cost.
 
 ## Parameters
 Our method takes two parameters:
-1. Number of pruning iterations (see line 243 in main.py)
+1. Number of pruning iterations (see line 243 in [main.py](main.py))
 2. Percentage of filters to be removed in each iteration (see line 244 in [main.py](main.py))
 ## Additional parameters (not recommended)
 1. Number of components to the Partial Least Squares (see line 254 in [main.py](main.py))
 2. Filter representation (see line 254 in [main.py](main.py)). The options are: 'max' and 'avg'. In addition, you can customize a pooling operation (i.e., max-pooling 2x2) to represent the filters (see line in [main.py](main.py))
 
 ## Limitations
-The provided code is able to prune simple CNN architectures (VGG-based) since complex networks (i.e., with skip connections) are complicated to rebuild. On the other hand, you can employ our method to identify the potential filters to be removed and use [Keras-Surgeon] (https://github.com/BenWhetton/keras-surgeon) to rebuild the network.
+The provided code is able to prune simple CNN architectures (VGG-based) since complex networks (i.e., with skip connections) are complicated to rebuild. On the other hand, you can employ our method to identify the potential filters to be removed and use [Keras-Surgeon](https://github.com/BenWhetton/keras-surgeon) to rebuild the network.
 
 ### Results
 Tables below show the comparison between our method with existing pruning methods. Negative values denote improvement regarding the original network. Please check our paper for more detailed results.
