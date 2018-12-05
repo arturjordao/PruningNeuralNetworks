@@ -165,26 +165,55 @@ def insert_fully(cnn_model, input_shape=(32, 32, 3), num_classes=10):
     return model
 
 def compute_flops(model):
-    total_flops =0
+    total_flops = 0
     flops_per_layer = []
 
-    for layer_idx in range(1, len(model.layers)):
-        layer = model.get_layer(index=layer_idx)
-        if isinstance(layer, keras.layers.Conv2D) is True:
-            _, output_map_H, output_map_W, current_layer_depth = layer.output_shape
+    try:
+        layer = model.get_layer(index=1).layers  # Just for discover the model type
+        for layer_idx in range(1, len(model.get_layer(index=1).layers)):
+            layer = model.get_layer(index=1).get_layer(index=layer_idx)
+            if isinstance(layer, keras.layers.Conv2D) is True:
+                _, output_map_H, output_map_W, current_layer_depth = layer.output_shape
 
-            _, _, _, previous_layer_depth = layer.input_shape
-            kernel_H, kernel_W = layer.kernel_size
+                _, _, _, previous_layer_depth = layer.input_shape
+                kernel_H, kernel_W = layer.kernel_size
 
-            flops = output_map_H*output_map_W*previous_layer_depth*current_layer_depth*kernel_H*kernel_W
-            total_flops += flops
-            flops_per_layer.append(flops)
+                flops = output_map_H * output_map_W * previous_layer_depth * current_layer_depth * kernel_H * kernel_W
+                total_flops += flops
+                flops_per_layer.append(flops)
 
+        for layer_idx in range(1, len(model.layers)):
+            layer = model.get_layer(index=layer_idx)
+            if isinstance(layer, keras.layers.Dense) is True:
+                _, current_layer_depth = layer.output_shape
 
-    # if total_flops / 1e9 > 1:  # for Giga Flops
-    #     print(total_flops / 1e9, '{}'.format('GFlops'))
-    # else:
-    #     print(total_flops / 1e6, '{}'.format('MFlops'))
+                _, previous_layer_depth = layer.input_shape
+
+                flops = current_layer_depth * previous_layer_depth
+                total_flops += flops
+                flops_per_layer.append(flops)
+    except:
+        for layer_idx in range(1, len(model.layers)):
+            layer = model.get_layer(index=layer_idx)
+            if isinstance(layer, keras.layers.Conv2D) is True:
+                _, output_map_H, output_map_W, current_layer_depth = layer.output_shape
+
+                _, _, _, previous_layer_depth = layer.input_shape
+                kernel_H, kernel_W = layer.kernel_size
+
+                flops = output_map_H * output_map_W * previous_layer_depth * current_layer_depth * kernel_H * kernel_W
+                total_flops += flops
+                flops_per_layer.append(flops)
+
+            if isinstance(layer, keras.layers.Dense) is True:
+                _, current_layer_depth = layer.output_shape
+
+                _, previous_layer_depth = layer.input_shape
+
+                flops = current_layer_depth * previous_layer_depth
+                total_flops += flops
+                flops_per_layer.append(flops)
+
     return total_flops, flops_per_layer
 
 def count_filters(model):
