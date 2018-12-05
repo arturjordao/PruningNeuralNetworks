@@ -31,9 +31,9 @@ VGG16 on Cifar-10
 |  [Hu et al.](https://arxiv.org/abs/1607.03250)  |  14.96 | 28.29 |       -0.66      |
 |  [Li et al.](https://arxiv.org/abs/1608.08710)  |  37.12 | 34.00 |       -0.1       |
 |    [Huang](https://ieeexplore.ieee.org/document/8354187)    |  83.68 | 64.70 |        1.9       |
-| Ours (it=1) |  9.99  | 23.21 |       -0.89      |
-| Ours (it=5) |  40.93 | 67.28 |       -0.63      |
-| Ours (it=9) |  68.63 | 90.69 |        1.5       |
+| Ours (it=1) |  9.99  | 23.13 |       -0.89      |
+| Ours (it=5) |  40.93 | 67.25 |       -0.63      |
+| Ours (it=9) |  68.63 | 90.66 |        1.5       |
 
 ResNet56 on Cifar-10
 
@@ -50,6 +50,7 @@ Please cite our paper in your publications if it helps your research.
 ```bash
 @article{Jordao:2018,
 author    = {Artur Jordao,
+Ricardo Kloss,
 Fernando Yamada and
 William Robson Schwartz},
 title     = {Pruning Deep Neural Networks using Partial Least Squares},
@@ -57,4 +58,4 @@ journal = {ArXiv e-prints},
 eprint = {1810.07610},
 }
 ```
-We would like to thank Ricardo Barbosa Kloss and Maiko Lie for the coffees and talks.
+We would like to thank Maiko Lie for the coffees and talks.
