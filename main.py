@@ -164,58 +164,6 @@ def insert_fully(cnn_model, input_shape=(32, 32, 3), num_classes=10):
     model = keras.models.Model(inp, H)
     return model
 
-def compute_flops(model):
-    total_flops = 0
-    flops_per_layer = []
-
-    try:
-        layer = model.get_layer(index=1).layers  # Just for discover the model type
-        for layer_idx in range(1, len(model.get_layer(index=1).layers)):
-            layer = model.get_layer(index=1).get_layer(index=layer_idx)
-            if isinstance(layer, keras.layers.Conv2D) is True:
-                _, output_map_H, output_map_W, current_layer_depth = layer.output_shape
-
-                _, _, _, previous_layer_depth = layer.input_shape
-                kernel_H, kernel_W = layer.kernel_size
-
-                flops = output_map_H * output_map_W * previous_layer_depth * current_layer_depth * kernel_H * kernel_W
-                total_flops += flops
-                flops_per_layer.append(flops)
-
-        for layer_idx in range(1, len(model.layers)):
-            layer = model.get_layer(index=layer_idx)
-            if isinstance(layer, keras.layers.Dense) is True:
-                _, current_layer_depth = layer.output_shape
-
-                _, previous_layer_depth = layer.input_shape
-
-                flops = current_layer_depth * previous_layer_depth
-                total_flops += flops
-                flops_per_layer.append(flops)
-    except:
-        for layer_idx in range(1, len(model.layers)):
-            layer = model.get_layer(index=layer_idx)
-            if isinstance(layer, keras.layers.Conv2D) is True:
-                _, output_map_H, output_map_W, current_layer_depth = layer.output_shape
-
-                _, _, _, previous_layer_depth = layer.input_shape
-                kernel_H, kernel_W = layer.kernel_size
-
-                flops = output_map_H * output_map_W * previous_layer_depth * current_layer_depth * kernel_H * kernel_W
-                total_flops += flops
-                flops_per_layer.append(flops)
-
-            if isinstance(layer, keras.layers.Dense) is True:
-                _, current_layer_depth = layer.output_shape
-
-                _, previous_layer_depth = layer.input_shape
-
-                flops = current_layer_depth * previous_layer_depth
-                total_flops += flops
-                flops_per_layer.append(flops)
-
-    return total_flops, flops_per_layer
-
 def count_filters(model):
     n_filters = 0
     for layer_idx in range(1, len(model.layers)):
@@ -266,8 +214,7 @@ if __name__ == '__main__':
 
     n_params = cnn_model.count_params()
     n_filters = count_filters(cnn_model)
-    flops, _ = compute_flops(cnn_model)
-    print('Original Network. #Parameters [{}] #Filters [{}] FLOPS [{}] Accuracy [{:.4f}]'.format(n_params, n_filters, flops, acc))
+    print('Original Network. #Parameters [{}] #Filters [{}] Accuracy [{:.4f}]'.format(n_params, n_filters, acc))
 
     iterations = 5
     p = 0.05
@@ -281,7 +228,10 @@ if __name__ == '__main__':
     for i in range(0, iterations):
 
         pruning_method = VIPPruning(n_comp=2, model=cnn_model, representation='max', percentage_discard=p)
-        #pruning_method = VIPPruning(n_comp=2, model=cnn_model, representation=MaxPooling2D(pool_size=(2, 2), name='vip_net'), percentage_discard=p)
+        # pruning_method = VIPPruning(n_comp=2, model=cnn_model,
+        #                             representation=MaxPooling2D(pool_size=(2, 2),
+        #                                                         name='vip_net'),
+        #                             percentage_discard=p)
 
         idxs = pruning_method.idxs_to_prune(X_train, y_train, [])
         cnn_model = rebuild_net(cnn_model, idxs)
@@ -302,7 +252,6 @@ if __name__ == '__main__':
 
         n_params  = model.count_params()
         n_filters = count_filters(model.get_layer(index=1))
-        flops, _ = compute_flops(model.get_layer(index=1))
-        print('Iteration [{}] #Parameters [{}] #Filters [{}] FLOPS [{}] Accuracy [{:.4f}]'.format(i, n_params, n_filters, flops, acc))
+        print('Iteration [{}] #Parameters [{}] #Filters [{}] Accuracy [{:.4f}]'.format(i, n_params, n_filters, acc))
 
         cnn_model = generate_conv_model(model=model)
