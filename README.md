@@ -26,25 +26,24 @@ Tables below show the comparison between our method with existing pruning method
 
 VGG16 on Cifar-10
 
-|    Method   | Dicarded Filters (%) | Discarded FLOPs (%) | Drop in Accuracy |
-|:-----------:|:------:|:-----:|:----------------:|
-|  [Hu et al.](https://arxiv.org/abs/1607.03250)  |  14.96 | 28.29 |       -0.66      |
-|  [Li et al.](https://arxiv.org/abs/1608.08710)  |  37.12 | 34.00 |       -0.1       |
-|    [Huang](https://ieeexplore.ieee.org/document/8354187)    |  83.68 | 64.70 |        1.9       |
-| Ours (it=1) |  9.99  | 23.13 |       -0.89      |
-| Ours (it=5) |  40.93 | 67.25 |       -0.63      |
-| Ours (it=9) |  68.63 | 90.66 |        1.5       |
+|    Method   | Discarded FLOPs (%) | Drop in Accuracy |
+|:-----------:|:-----:|:----------------:|
+|  [Hu et al.](https://arxiv.org/abs/1607.03250)  |  28.29 |       -0.66      |
+|  [Li et al.](https://arxiv.org/abs/1608.08710)  |  34.00 |       -0.10       |
+|    [Huang](https://ieeexplore.ieee.org/document/8354187)   | 64.70 |        1.90       |
+| Ours (it=1) | 23.13 |       -0.89      |
+| Ours (it=5) | 67.25 |       -0.63      |
+| Ours (it=9) | 90.66 |        1.50       |
 
 ResNet56 on Cifar-10
 
-|     Method     | Dicarded Filters (%) | Discarded FLOPs (%) | Drop in Accuracy |
-|:--------------:|:------:|:-----:|:----------------:|
-|   [Huang](https://ieeexplore.ieee.org/document/8354187)   |    x   | 64.70 |        1.7       |
-| [Yu et al.](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0601.pdf) |    x   | 43.61 |       0.03       |
-| [He et al.](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yihui_He_AMC_Automated_Model_ECCV_2018_paper.pdf) |    x   | 50.00 |       0.90       |
-|   Ours(it=1)   |  4.34  |  7.95 |       -1.03      |
-|   Ours(it=5)   |  17.60 | 31.48 |       -0.46      |
-|   Ours(it=6)   |  24.49 | 48.01 |       0.34       |
+|     Method     | Discarded FLOPs (%) | Drop in Accuracy |
+|:--------------:|:-----:|:----------------:|
+| [Yu et al.](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0601.pdf) |   43.61 |       0.03       |
+| [He et al.](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yihui_He_AMC_Automated_Model_ECCV_2018_paper.pdf) | 50.00 |  0.90       |
+|   Ours(it=1)   |   7.09 | -0.60 |
+|   Ours(it=5)   |  35.23 | -0.90 |
+|   Ours(it=8)   |  52.56 |-0.62|
 
 Please cite our paper in your publications if it helps your research.
 ```bash
