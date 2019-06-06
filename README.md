@@ -1,6 +1,8 @@
 # Pruning Neural Networks
 This repository provides the implementation of the method proposed in our paper "Pruning Deep Neural Networks using Partial Least Squares"
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 ## Requirements
 - [Scikit-learn](http://scikit-learn.org/stable/)
 - [Keras](https://github.com/fchollet/keras) (Recommended version 2.1.2)
