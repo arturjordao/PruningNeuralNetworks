@@ -49,14 +49,13 @@ ResNet56 on Cifar-10
 
 Please cite our paper in your publications if it helps your research.
 ```bash
-@article{Jordao:2018,
+@inproceedings{Jordao:2019,
 author    = {Artur Jordao,
 Ricardo Kloss,
 Fernando Yamada and
 William Robson Schwartz},
 title     = {Pruning Deep Neural Networks using Partial Least Squares},
-journal = {ArXiv e-prints},
-eprint = {1810.07610},
+booktitle = {British Machine Vision Conference (BMVC) Workshop},
 }
 ```
 We would like to thank Maiko Lie for the coffees and talks.
