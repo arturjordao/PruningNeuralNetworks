@@ -1,5 +1,5 @@
 # Pruning Neural Networks
-This repository provides the implementation of the method proposed in our paper "Pruning Deep Neural Networks using Partial Least Squares"
+This repository provides the implementation of the method proposed in our paper "Pruning Deep Neural Networks using Partial Least Squares". The code in this repository is able to prune simple CNN architectures (i.e., VGG-based). To prune more sophisticated networks (i.e., ResNets), you can employ our method to identify potential filters to be removed and use [Keras-Surgeon](https://github.com/BenWhetton/keras-surgeon) to rebuild the network.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -20,22 +20,8 @@ Our method takes two parameters:
 1. Number of components of Partial Least Squares (see line 254 in [main.py](main.py))
 2. Filter representation (see line 254 in [main.py](main.py)). The options are: 'max' and 'avg'. In addition, you can customize a pooling operation (i.e., max-pooling 2x2) to represent the filters (see line 255 in [main.py](main.py))
 
-## Limitations
-The provided code is able to prune simple CNN architectures (VGG-based) since complex networks (i.e., with skip connections) are complicated to rebuild. On the other hand, you can employ our method to identify the potential filters to be removed and use [Keras-Surgeon](https://github.com/BenWhetton/keras-surgeon) to rebuild the network.
-
-### Results
+## Results
 Tables below show the comparison between our method with existing pruning methods. Negative values in accuracy denote improvement regarding the original network. Please check our paper for more detailed results.
-
-VGG16 on Cifar-10
-
-|    Method   | FLOPs ↓ (%) | Accuracy ↓ (percentage points) |
-|:-----------:|:-----:|:----------------:|
-|  [Hu et al.](https://arxiv.org/abs/1607.03250)  |  28.29 |       -0.66      |
-|  [Li et al.](https://arxiv.org/abs/1608.08710)  |  34.00 |       -0.10       |
-|    [Huang](https://ieeexplore.ieee.org/document/8354187)   | 64.70 |        1.90       |
-| Ours (it=1) | 23.13 |       -0.89      |
-| Ours (it=5) | 67.25 |       -0.63      |
-| Ours (it=9) | 90.66 |        1.50       |
 
 ResNet56 on Cifar-10
 
@@ -47,6 +33,17 @@ ResNet56 on Cifar-10
 |   Ours(it=5)   |  35.23 | -0.90 |
 |   Ours(it=8)   |  52.56 |-0.62|
 
+ResNet50 on ImageNet
+
+|    Method   | FLOPs ↓ (%) | Accuracy ↓ (percentage points) |
+|:-----------:|:-----:|:----------------:|
+|  [Liu et al.](https://openreview.net/pdf?id=rJlnB3C5Ym)  |  36.70 |       1.01      |
+|  [He et al.](https://arxiv.org/pdf/1808.06866.pdf)  |  41.80 |       8.27       |
+|  [He et al.](http://openaccess.thecvf.com/content_CVPR_2019/papers/He_Filter_Pruning_via_Geometric_Median_for_Deep_Convolutional_Neural_Networks_CVPR_2019_paper.pdf)   | 53.50 |        0.55       |
+| Ours (it=1) | 6.13 |       -1.92      |
+| Ours (it=5) | 27.45 |       -0.31      |
+| Ours (it=10) | 44.50 |        1.01       |
+
 Please cite our paper in your publications if it helps your research.
 ```bash
 @inproceedings{Jordao:2019,
@@ -55,7 +52,15 @@ Ricardo Kloss,
 Fernando Yamada and
 William Robson Schwartz},
 title     = {Pruning Deep Neural Networks using Partial Least Squares},
-booktitle = {British Machine Vision Conference (BMVC) Workshop},
+booktitle = {British Machine Vision Conference (BMVC) Workshops: Embedded AI for Real-Time Machine Vision},
+}
+@article{Jordao::2020,
+  author    = {Artur Jordao,
+Fernando Yamada and
+William Robson Schwartz},
+  title     = {Deep network compression based on Partial Least Squares},
+  journal   = {Neurocomputing},
+  year      = {2020},
 }
 ```
 We would like to thank Maiko Lie for the coffees and talks.
