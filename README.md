@@ -1,5 +1,5 @@
 # Pruning Neural Networks
-This repository provides the implementation of the method proposed in our paper "Pruning Deep Neural Networks using Partial Least Squares". The code in this repository is able to prune simple CNN architectures (i.e., VGG-based). To prune more sophisticated networks (i.e., ResNets), you can employ our method to identify potential filters to be removed and use [Keras-Surgeon](https://github.com/BenWhetton/keras-surgeon) to rebuild the network.
+This repository provides the implementation of the method proposed in our paper [Pruning Deep Neural Networks using Partial Least Squares](https://homepages.dcc.ufmg.br/~arturjordao/Files/Papers/BMVC_2019.pdf). The code in this repository is able to prune simple CNN architectures (i.e., VGG-based). To prune more sophisticated networks (i.e., ResNets), you can employ our method to identify potential filters to be removed and use [Keras-Surgeon](https://github.com/BenWhetton/keras-surgeon) to rebuild the network.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
