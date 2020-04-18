@@ -55,12 +55,12 @@ title     = {Pruning Deep Neural Networks using Partial Least Squares},
 booktitle = {British Machine Vision Conference (BMVC) Workshops: Embedded AI for Real-Time Machine Vision},
 }
 @article{Jordao::2020,
-  author    = {Artur Jordao,
+author    = {Artur Jordao,
 Fernando Yamada and
 William Robson Schwartz},
-  title     = {Deep network compression based on Partial Least Squares},
-  journal   = {Neurocomputing},
-  year      = {2020},
+title     = {Deep network compression based on Partial Least Squares},
+journal   = {Neurocomputing},
+year      = {2020},
 }
 ```
 We would like to thank Maiko Lie for the coffees and talks.
