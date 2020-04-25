@@ -14,14 +14,14 @@ This repository provides the implementation of the method proposed in our paper 
 
 ## Parameters
 Our method takes two parameters:
-1. Number of pruning iterations (see line 243 in [main.py](main.py))
-2. Percentage of filters to be removed in each iteration (see line 244 in [main.py](main.py))
+1. Number of pruning iterations (see line 138 in [main.py](main.py))
+2. Percentage of filters to be removed in each iteration (see line 139 in [main.py](main.py))
 ## Additional parameters (not recommended)
-1. Number of components of Partial Least Squares (see line 254 in [main.py](main.py))
-2. Filter representation (see line 254 in [main.py](main.py)). The options are: 'max' and 'avg'. In addition, you can customize a pooling operation (i.e., max-pooling 2x2) to represent the filters (see line 255 in [main.py](main.py))
+1. Number of components of Partial Least Squares (see line 141 in [main.py](main.py))
+2. Filter representation (see line 192 in [main.py](main.py)). The options are: 'max' and 'avg'. In addition, you can customize a pooling operation (i.e., max-pooling 2x2) to represent the filters (see line 255 in [main.py](main.py))
 
 ## Results
-Tables below show the comparison between our method with existing pruning methods. Negative values in accuracy denote improvement regarding the original network. Please check our paper for more detailed results.
+Tables below show the comparison between our method with existing pruning methods. Negative values in accuracy denote improvement regarding the original network. Please check our paper for more detailed results. We provide the models and weights to reproduce these results in models/CIFAR10.
 
 ResNet56 on Cifar-10
 
