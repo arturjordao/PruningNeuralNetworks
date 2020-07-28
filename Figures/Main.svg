@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="368.667px" height="287.332px" viewBox="0 0 368.667 287.332" enable-background="new 0 0 368.667 287.332"
+	 xml:space="preserve">
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="round" stroke-miterlimit="10" points="41.417,258.33 
+	41.417,1.829 366.917,1.829 366.917,258.33 41.417,258.33 "/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-linejoin="round" stroke-miterlimit="10" x1="41.417" y1="258.33" x2="366.917" y2="258.33"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-linejoin="round" stroke-miterlimit="10" x1="41.417" y1="258.575" x2="41.417" y2="2.074"/>
+<text transform="matrix(1 0 0 1 78.7607 271.0796)" font-family="'MyriadPro-Regular'" font-size="12">18</text>
+<text transform="matrix(1 0 0 1 141.4634 271.0796)" font-family="'MyriadPro-Regular'" font-size="12">19</text>
+<text transform="matrix(1 0 0 1 204.9165 271.0796)" font-family="'MyriadPro-Regular'" font-size="12">20</text>
+<text transform="matrix(1 0 0 1 266.2622 271.0796)" font-family="'MyriadPro-Regular'" font-size="12">21</text>
+<text transform="matrix(1 0 0 1 329.2622 271.0796)" font-family="'MyriadPro-Regular'" font-size="12">22</text>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-linejoin="round" stroke-miterlimit="10" x1="41.417" y1="258.33" x2="44.417" y2="258.33"/>
+<text transform="matrix(1 0 0 1 19.6665 230.4653)" font-family="'MyriadPro-Regular'" font-size="12">0.88</text>
+<text transform="matrix(1 0 0 1 24.9165 165.8501)" font-family="'MyriadPro-Regular'" font-size="12">0.9</text>
+<text transform="matrix(1 0 0 1 19.6665 102.1001)" font-family="'MyriadPro-Regular'" font-size="12">0.92</text>
+<text transform="matrix(1 0 0 1 19.6665 37.6001)" font-family="'MyriadPro-Regular'" font-size="12">0.94</text>
+<path fill="#10FFBB" d="M102.917,239.58c0,2.485-2.015,4.5-4.5,4.5s-4.5-2.015-4.5-4.5c0-2.486,2.015-4.5,4.5-4.5
+	S102.917,237.093,102.917,239.58"/>
+<path fill="#40FFEF" d="M94.667,172.83c0,3.313-2.686,6-6,6s-6-2.688-6-6c0-3.314,2.686-6,6-6S94.667,169.515,94.667,172.83"/>
+<path fill="#40A4FF" d="M132.167,88.829c0,3.728-3.022,6.75-6.75,6.75s-6.75-3.022-6.75-6.75s3.022-6.75,6.75-6.75
+	S132.167,85.101,132.167,88.829"/>
+<path fill="#2400FF" d="M179.417,69.329c0,5.385-4.365,9.75-9.75,9.75c-5.384,0-9.75-4.365-9.75-9.75s4.366-9.75,9.75-9.75
+	C175.051,59.579,179.417,63.944,179.417,69.329"/>
+<path fill="#FF4040" d="M354.167,17.579c0,8.284-6.716,15-15,15s-15-6.716-15-15s6.716-15,15-15S354.167,9.294,354.167,17.579"/>
+<path fill="#40E2FF" d="M63.917,76.829c0,3.728-3.022,6.75-6.75,6.75s-6.75-3.022-6.75-6.75s3.022-6.75,6.75-6.75
+	S63.917,73.101,63.917,76.829"/>
+<path fill="#40BFFF" d="M128.417,35.579c0,5.385-4.365,9.75-9.75,9.75s-9.75-4.365-9.75-9.75s4.365-9.75,9.75-9.75
+	S128.417,30.194,128.417,35.579"/>
+<text transform="matrix(1 0 0 1 155.3428 283.0796)" font-family="'MyriadPro-Regular'" font-size="14">FLOPs (log scale)</text>
+<text transform="matrix(-6.123234e-017 -1 1 -6.123234e-017 12.1665 153.8335)" font-family="'MyriadPro-Regular'" font-size="14">Accuracy</text>
+<rect x="-13.333" y="-21.421" fill="none" width="420.001" height="315.001"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-linejoin="round" stroke-miterlimit="10" x1="366.75" y1="258.33" x2="366.75" y2="1.829"/>
+<line fill="none" stroke="#000000" stroke-width="0.5" stroke-linejoin="round" stroke-miterlimit="10" x1="41.417" y1="1.663" x2="366.917" y2="1.663"/>
+<text transform="matrix(1 0 0 1 315.1323 44.0796)" font-family="'MyriadPro-Regular'" font-size="12">NASNet</text>
+<text transform="matrix(1 0 0 1 159.9165 90.0796)" font-family="'MyriadPro-Regular'" font-size="12">ResNet110</text>
+<text transform="matrix(1 0 0 1 108.9165 21.4131)" font-family="'MyriadPro-Regular'" font-size="12">Ours</text>
+<text transform="matrix(1 0 0 1 50.4165 66.4131)" font-family="'MyriadPro-Regular'" font-size="12">Ours</text>
+<text transform="matrix(1 0 0 1 84.7554 107.4126)" font-family="'MyriadPro-Regular'" font-size="12">ResNet56</text>
+<text transform="matrix(1 0 0 1 82.6665 164.0796)" font-family="'MyriadPro-Regular'" font-size="12">MobileV2</text>
+<text transform="matrix(1 0 0 1 93.9165 231.4126)" font-family="'MyriadPro-Regular'" font-size="12">MobileV1</text>
+<g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-linejoin="round" x1="359.666" y1="250.329" x2="292.842" y2="250.329"/>
+			<g>
+				<polygon points="294.301,245.342 285.666,250.329 294.301,255.315 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-linejoin="round" x1="359.666" y1="250.164" x2="359.666" y2="185.671"/>
+			<g>
+				<polygon points="364.652,187.13 359.666,178.495 354.679,187.13 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 286.2505 188.5386)" font-family="'MyriadPro-Regular'" font-size="12">Higher Better</text>
+<text transform="matrix(1 0 0 1 285.6665 241.7456)" font-family="'MyriadPro-Regular'" font-size="12">Lower Better</text>
+</svg>
