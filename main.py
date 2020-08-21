@@ -35,7 +35,7 @@ def rebuild_net(model=None, layer_filters=[]):
     idxs = []
     idx_previous = []
 
-    for i in range(0, len(model.layers)+1):#There is bug; it is necessary use model.layers+1
+    for i in range(0, len(model.layers)+1):
 
         try:
             layer = model.get_layer(index=i)
